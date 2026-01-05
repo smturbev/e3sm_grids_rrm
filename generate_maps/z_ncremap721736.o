@@ -1,0 +1,19 @@
+Running in conda environment:
+# conda environments:
+#
+e3sm-unified_1.11     *  /ascldap/users/smturbe/.conda/envs/e3sm-unified_1.11
+smt_cdo                  /ascldap/users/smturbe/.conda/envs/smt_cdo
+smt_e3sm                 /ascldap/users/smturbe/.conda/envs/smt_e3sm
+smt_movie                /ascldap/users/smturbe/.conda/envs/smt_movie
+smt_nco                  /ascldap/users/smturbe/.conda/envs/smt_nco
+smt_plt                  /ascldap/users/smturbe/.conda/envs/smt_plt
+smt_tobac                /ascldap/users/smturbe/.conda/envs/smt_tobac
+base                     /projects/netpub/anaconda3/2022.05
+
+Using atmosphere grid file /tscratch/smturbe/e3sm_grids/ne4/ne4pg2.g
+cd /tscratch/smturbe/e3sm_grids/ne4/mapping_files
+Grid(src): /projects/ccsm/inputdata/ocn/mpas-o/oQU480/ocean.QU.480km.151209.nc
+Grid(dst): /tscratch/smturbe/e3sm_grids/ne4/ne4pg2.g
+ncremap: ERROR Failed to generate intersection mesh-file. Debug this:
+/ascldap/users/smturbe/.conda/envs/e3sm-unified_1.11/bin/GenerateOverlapMesh --allow_no_overlap --a "/projects/ccsm/inputdata/ocn/mpas-o/oQU480/ocean.QU.480km.151209.nc" --b "/tscratch/smturbe/e3sm_grids/ne4/ne4pg2.g" --out "/tmp/ncremap_tmp_msh_ovr_tempest.g.pid218748" > /dev/null
+ncremap: HINT GenerateOverlapMesh can fail for a number of reasons including 1) It requires that grids of unequal area be given as arguments in the order smaller first, larger second. ncremap supplies the grid arguments in the order source first, destination second unless explicitly told otherwise. A source grid that is a superset of the destination would violate the GenerateOverlapMesh rule. The solution is to add the "--a2o" switch (documented at http://nco.sf.net/nco.html#a2o) that tells ncremap to swap the grid argument order. 2) It requires that SCRIP files strictly adhere to SCRIP conventions, including that "grid_imask" be of integer type not floating-point type. Unfortunately some malformed SCRIP files violate this convention. The workaround can be as simple as "ncap2 -s 'grid_imask=int(grid_imask)' grid_in.nc grid_out.nc"

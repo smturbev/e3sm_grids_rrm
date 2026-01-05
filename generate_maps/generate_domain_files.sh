@@ -1,6 +1,28 @@
 #!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --job-name=ncremap
+#SBATCH --time=02:00:00
+#SBATCH --account=fy250018
+#SBATCH --license=gpfs,pscratch,tscratch
+#SBATCH --reservation=flight-cldera
+#SBATCH --partition=short,batch
+#SBATCH --mail-user=smturbe@sandia.gov
+#SBATCH --mail-type=ALL
+#SBATCH --output=zdomain%j.o
+#SBATCH --error=zdomain%j.e
 
-set -e
+set -evx # verbose messages and crash message
+
+module purge 
+# Settings for flight and boca
+module load aue/python/3.11
+
+source /projects/netpub/anaconda3/2022.05/etc/profile.d/conda.sh
+conda activate e3sm-unified_1.11
+
+echo "Running in conda environment:"
+conda env list
+
 
 if [ $# -ge 1 ]; then
     configuration=$1
@@ -35,6 +57,7 @@ cd `dirname ${gen_domain}`/src
 # Setup environment (should work on any E3SM-supported machine)
 eval $(${e3sm_root}/cime/CIME/Tools/get_case_env)
 ${e3sm_root}/cime/CIME/scripts/configure --macros-format Makefile --mpilib mpi-serial
+chmod +x .env_mach_specific.sh
 source .env_mach_specific.sh
 
 # Build gen_domain tool
@@ -65,7 +88,7 @@ for destination_grid in ${destination_grids[@]}; do
             map_ocn_to_lnd=`ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_monotr_*.nc | tail -n1`
         elif `ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_mono_*.nc &> /dev/null`; then
             map_ocn_to_lnd=`ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_mono_*.nc | tail -n1`
-        elif `ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_aave_*.nc &> /dev/null`; then
+        elif `ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_traave_*.nc &> /dev/null`; then
             map_ocn_to_lnd=`ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_aave_*.nc | tail -n1`
         elif `ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_nco_*.nc &> /dev/null`; then
             map_ocn_to_lnd=`ls ${mapping_root}/map_${ocn_grid_name}_to_${destination_grid}_nco_*.nc | tail -n1`

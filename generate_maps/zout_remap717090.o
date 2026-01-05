@@ -1,0 +1,50 @@
+Running in conda environment:
+# conda environments:
+#
+e3sm-unified_1.11     *  /ascldap/users/smturbe/.conda/envs/e3sm-unified_1.11
+smt_cdo                  /ascldap/users/smturbe/.conda/envs/smt_cdo
+smt_e3sm                 /ascldap/users/smturbe/.conda/envs/smt_e3sm
+smt_movie                /ascldap/users/smturbe/.conda/envs/smt_movie
+smt_nco                  /ascldap/users/smturbe/.conda/envs/smt_nco
+smt_plt                  /ascldap/users/smturbe/.conda/envs/smt_plt
+smt_tobac                /ascldap/users/smturbe/.conda/envs/smt_tobac
+base                     /projects/netpub/anaconda3/2022.05
+
+Using atmosphere grid file /tscratch/smturbe/e3sm_grids/ne4/ne4pg2.g
+Map ocean to atmosphere...
+Error: Insufficient values for option --out_map
+
+Usage: GenerateOfflineMap <Parameter List>
+Parameters:
+  --in_mesh <string> ["/projects/ccsm/inputdata/ocn/mpas-o/oQU480/ocean.QU.480km.151209.nc"] 
+  --out_mesh <string> ["/tscratch/smturbe/e3sm_grids/ne4/ne4pg2.g"] 
+  --ov_mesh <string> [""] 
+  --in_type <string> ["fv"] [fv|cgll|dgll]
+  --out_type <string> ["fv"] [fv|cgll|dgll]
+  --out_map <string> [""] 
+  --in_meta <string> [""] 
+  --out_meta <string> [""] 
+  --in_concave <bool> [false] 
+  --out_concave <bool> [false] 
+  --in_np <integer> [1] 
+  --out_np <integer> [4] 
+  --method <string> [""] 
+  --mono <bool> [true] 
+  --nobubble <bool> [false] 
+  --correct_areas <bool> [true] 
+  --nocorrectareas <bool> [false] 
+  --noconserve <bool> [false] 
+  --nocheck <bool> [false] 
+  --sparse_constraints <bool> [false] 
+  --volumetric <bool> [false] 
+  --mono2 <bool> [false] 
+  --mono3 <bool> [false] 
+  --in_data <string> [""] 
+  --out_data <string> [""] 
+  --var <string> [""] 
+  --ncol_name <string> ["ncol"] 
+  --out_double <bool> [false] 
+  --preserve <string> [""] 
+  --preserveall <bool> [false] 
+  --fillvalue <double> [0.000000] 
+  --out_format <string> ["Netcdf4"] [Classic|Offset64Bits|Netcdf4|Netcdf4Classic]

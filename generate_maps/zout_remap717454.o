@@ -1,0 +1,15 @@
+Running in conda environment:
+# conda environments:
+#
+e3sm-unified_1.11     *  /ascldap/users/smturbe/.conda/envs/e3sm-unified_1.11
+smt_cdo                  /ascldap/users/smturbe/.conda/envs/smt_cdo
+smt_e3sm                 /ascldap/users/smturbe/.conda/envs/smt_e3sm
+smt_movie                /ascldap/users/smturbe/.conda/envs/smt_movie
+smt_nco                  /ascldap/users/smturbe/.conda/envs/smt_nco
+smt_plt                  /ascldap/users/smturbe/.conda/envs/smt_plt
+smt_tobac                /ascldap/users/smturbe/.conda/envs/smt_tobac
+base                     /projects/netpub/anaconda3/2022.05
+
+Using atmosphere grid file /tscratch/smturbe/e3sm_grids/ne4/ne4pg2_scrip.nc
+cdo    remapcon: Point search radius = 180 deg
+cdo    remapcon: Extrapolation disabled!
