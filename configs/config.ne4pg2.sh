@@ -3,6 +3,7 @@
 grid_name=ne4
 output_root=/tscratch/smturbe/e3sm_grids/${grid_name}
 e3sm_root=${HOME}/codes/e3sm/cirrus-cloud-thinning
+mapping_root=${output_root}/mapping_files
 
 inputdata_root=/projects/ccsm/inputdata
 tempest_root=${HOME}/e3sm_grids_rrm/tempestremap

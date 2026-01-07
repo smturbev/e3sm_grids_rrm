@@ -102,12 +102,19 @@ sbatch generate_maps/generate_mapping_files_ncremap.sh configs/config_ne4pg2.sh
 
 ### 4. Generate domain files
 
- Domain files are needed by the coupler and the land model at runtime. Domain files are created from the mapping files created in the previous step, using a tool provided with CIME in ${e3sm_root}/cime/tools/mapping/gen_domain_files.
+ Domain files are needed by the coupler and the land model at runtime. Domain files are created from the mapping files created in the previous step, and call the python file in ```${e3sm_root}/tools/generate_domain_files/generate_domain_files_E3SM.py```
 
- Make sure to have the e3sm_root (path to your local E3SM code base) in your config file. 
+ Make sure to have the e3sm_root (path to your local E3SM code base) in your config file. And update the bash file below with the correct config file 
 
  ```
-sbatch generate_maps/generate_domain_files.sh configs/config.ne4pg2.sh
+sbatch ./generate_domain_files.sh
  ```
+
+
+### 5. Generate topography files
+
+#### (a) Building homme_tool
+
+
 
  
