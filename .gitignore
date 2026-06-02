@@ -6,3 +6,5 @@
 .ipynb_checkpoints
 .env_mach_specific.sh
 .env_mach_specific.csh
+ca_rrm/code_carrm_grid/zstep*
+
