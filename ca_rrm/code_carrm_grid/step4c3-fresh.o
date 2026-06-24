@@ -1,0 +1,28 @@
+ Copyright (C) 1995-2019 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.6.2
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	input: ne30np4_tmp.nc output:ne30np4_scrip.nc
+(0)	grid_size = 48602
+(0)	detected pentagon control volumes
+(0)	lon min/max = 0 360
+(0)	lat min/max = -90 90
+(0)	dims of cv_lon: 26
+(1)	dims of cv_lon: 48602
+(0)	dims of grid_corner_lat: 48602
+(1)	dims of grid_corner_lat: 5
+(0)	i=36632 pole point: -90 0
+(0)	cv: -89.64660925534783 224.9999999999978
+(1)	cv: -89.64660925534783 135.0000000000004
+(2)	cv: -89.64660925534783 45
+(3)	cv: -89.64660925534783 314.9999999999993
+(4)	cv: -89.64660925534783 314.9999999999993
+(0)	i=44553 pole point: 90 0
+(0)	cv: 89.64660925534783 315
+(1)	cv: 89.64660925534783 44.99999999999952
+(2)	cv: 89.64660925534783 135
+(3)	cv: 89.64660925534783 224.9999999999991
+(4)	cv: 89.64660925534783 224.9999999999991
+(0)	writing attributes...
+(0)	writing grid data....

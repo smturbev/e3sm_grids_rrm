@@ -4,6 +4,7 @@
 import os
 from os.path import splitext, basename
 from matplotlib import pyplot as plt, patches
+import numpy as np
 from cartopy import crs
 from xarray import open_dataset
 import sys
@@ -28,9 +29,11 @@ ax = figure.add_subplot(111, projection=crs.PlateCarree())
 ax.stock_img()
 ax.coastlines()
 ax.set_global()
-extent = (-125, -90, 30, 46)
+extent = (-130, -90, 30, 46)
 ax.set_extent(extent)
 ax.set_title(f'number of elements: {ds2.dims["num_elem"]}')
 pl = e3smplot.plot_exodus(ds2, ax=ax, verbose=True, linewidth=0.2)
+ax.set_xticks(np.arange(-130,-89,5))
+ax.set_yticks(np.arange(30,47,2))
 figure.savefig(f'plots/{basename(splitext(refined_mesh)[0])}.pdf', bbox_inches='tight')
 figure.savefig(f'plots/{basename(splitext(refined_mesh)[0])}.png', bbox_inches='tight')

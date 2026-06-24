@@ -1,4 +1,5 @@
 #!/bin/bash -ev
+# This script builds homme tool (set up for flight)
 
 # Set relevant paths
 e3sm_root=~/codes/e3sm/jasonltorchinsky-flight
@@ -46,14 +47,14 @@ export MKLROOT=/projects/global/toss4/compilers/intel/intel_2021/oneapi/mkl/2021
 ml load aue/parallel-netcdf/1.12.3-oneapi-2021.5.0-openmpi-4.1.6
 eval `${e3sm_root}/cime/CIME/Tools/get_case_env`
 
-# Run cmake
-cmake -C ${mach_file} $homme_root $cmake_flags
+# # Run cmake
+# cmake -C ${mach_file} $homme_root $cmake_flags
 
-# Run make with verbose output and call it homme_tool
-make VERBOSE=1 -j4 homme_tool
+# # Run make with verbose output and call it homme_tool
+# make VERBOSE=1 -j4 homme_tool
 
-echo "-- Built homme_tool"
+# echo "-- Built homme_tool"
 
-cd $script_dir
-echo "-- Returning to script dir"
-echo "-- Done!"
+# cd $script_dir
+# echo "-- Returning to script dir"
+# echo "-- Done!"
