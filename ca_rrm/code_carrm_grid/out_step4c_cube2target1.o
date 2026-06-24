@@ -1,0 +1,86 @@
++ /tscratch/smturbe/homme_test/cube_to_target/cube_to_target --target-grid /tscratch/smturbe/homme_test/homme_tool/ne30np4_scrip.nc --input-topography /projects/ccsm/inputdata/atm/cam/hrtopo/USGS-topo-cube3000.nc --output-topography /tscratch/smturbe/e3sm_grids/ne30/topo/ne30np4_topo.nc
+ dimension of target grid: ntarget=       48602
+ maximum number of corners: ncorner=           5
+ grid rank: nrank=           1
+ get dimension of cubed-sphere data from file
+ cubed-sphere dimension: ncube =         3000
+ average grid-spacing at the Equator (degrees):  2.9999999E-02
+ cell        1000      2.05752849676968      % done
+ cell        2000      4.11505699353936      % done
+ cell        3000      6.17258549030904      % done
+ cell        4000      8.23011398707872      % done
+ cell        5000      10.2876424838484      % done
+ cell        6000      12.3451709806181      % done
+ cell        7000      14.4026994773878      % done
+ cell        8000      16.4602279741574      % done
+ cell        9000      18.5177564709271      % done
+ cell       10000      20.5752849676968      % done
+ cell       11000      22.6328134644665      % done
+ cell       12000      24.6903419612362      % done
+ cell       13000      26.7478704580058      % done
+ cell       14000      28.8053989547755      % done
+ cell       15000      30.8629274515452      % done
+ cell       16000      32.9204559483149      % done
+ cell       17000      34.9779844450846      % done
+ cell       18000      37.0355129418542      % done
+ cell       19000      39.0930414386239      % done
+ cell       20000      41.1505699353936      % done
+ cell       21000      43.2080984321633      % done
+ cell       22000      45.2656269289330      % done
+ cell       23000      47.3231554257026      % done
+ cell       24000      49.3806839224723      % done
+ cell       25000      51.4382124192420      % done
+ cell       26000      53.4957409160117      % done
+ cell       27000      55.5532694127814      % done
+ cell       28000      57.6107979095510      % done
+ cell       29000      59.6683264063207      % done
+ cell       30000      61.7258549030904      % done
+ cell       31000      63.7833833998601      % done
+ cell       32000      65.8409118966298      % done
+ cell       33000      67.8984403933995      % done
+ cell       34000      69.9559688901691      % done
+ cell       35000      72.0134973869388      % done
+ cell       36000      74.0710258837085      % done
+ cell       37000      76.1285543804782      % done
+ cell       38000      78.1860828772479      % done
+ cell       39000      80.2436113740175      % done
+ cell       40000      82.3011398707872      % done
+ cell       41000      84.3586683675569      % done
+ cell       42000      86.4161968643266      % done
+ cell       43000      88.4737253610963      % done
+ cell       44000      90.5312538578659      % done
+ cell       45000      92.5887823546356      % done
+ cell       46000      94.6463108514053      % done
+ cell       47000      96.7038393481750      % done
+ cell       48000      98.7613678449447      % done
+ sum of all weights divided by surface area of sphere  =  2.873998314300998E-005
+ actual number of weights    57309288
+ anticipated number of weights  1080000000
+  1.336748457829401E-017  2.741556680124889E-007
+ read cubed-sphere 3km data from file
+ cubed-sphere dimension, ncube:         3000
+ min/max of terr  -405.000000000000        8317.65756557358     
+ min/max of landfrac  0.000000000000000E+000   1.00000000000000     
+ min/max of sgh30  0.000000000000000E+000   1518414.34356547     
+ close file
+ done reading in data from netCDF file
+ tmp   2908.11462959406     
+ max difference between target grid area and remapping software area
+  1.031393563160872E-008
+ Elevation data passed min/max consistency check!
+ 
+ min/max of unsmoothed terr_target        :   -44.9435057194745     
+   5504.58508018613     
+ min/max of var30_target                  :   0.000000000000000E+000
+   132593.476192952     
+ mean height (globally) of topography about sea-level for target grid unfiltered
+  elevation   231.420398034732     
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+cube_to_target     00000000004619AA  for__signal_handl     Unknown  Unknown
+libpthread-2.28.s  00007FFFF6894990  Unknown               Unknown  Unknown
+cube_to_target     0000000000439A22  Unknown               Unknown  Unknown
+cube_to_target     0000000000433E98  Unknown               Unknown  Unknown
+cube_to_target     000000000040B962  Unknown               Unknown  Unknown
+libc-2.28.so       00007FFFF64E6865  __libc_start_main     Unknown  Unknown
+cube_to_target     000000000040B86E  Unknown               Unknown  Unknown
